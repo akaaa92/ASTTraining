@@ -1,0 +1,19 @@
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkmarx AST CLI Action
+        uses: checkmarx/ast-github-action@main
+        with:
+          project_name: CLI _GA
+          base_uri: 
+          cx_tenant: test_naftali
+          cx_client_id: GA_TEST
+          cx_client_secret: ZkUvKxJggGeZZMEA9PKRpxTAcbA0gb6t
+	        additional_params: --sast-incremental
