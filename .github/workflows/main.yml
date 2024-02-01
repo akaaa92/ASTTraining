@@ -1,3 +1,4 @@
+name: Checkmarx AST Scan
 on:
   pull_request:
     types: [opened, reopened, synchronize]
@@ -12,8 +13,8 @@ jobs:
         uses: checkmarx/ast-github-action@main
         with:
           project_name: CLI _GA
-          base_uri: 
+          base_uri: https://eu.ast.checkmarx.net
           cx_tenant: test_naftali
           cx_client_id: GA_TEST
           cx_client_secret: ZkUvKxJggGeZZMEA9PKRpxTAcbA0gb6t
-	        additional_params: --sast-incremental
+          additional_params: --sast-incremental
