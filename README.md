@@ -1,3 +1,3 @@
 # ASTTraining
 
-Just testing the CxONE
+checked
